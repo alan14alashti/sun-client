@@ -13,13 +13,13 @@
         background-color: var(--tp-theme-primary);
         width: 100%;
         padding: 12px 30px;
-        text-align: left;
+        text-align: right;
         position: relative;
 
         &::after{
             position: absolute;
             content: '\f107';
-            right: 30px;
+            left: 30px;
             top: 50%;
             @include transform(translateY(-50%));
             font-family: var(--tp-ff-fontawesome);
@@ -57,7 +57,7 @@
             &::after{
                 position: absolute;
                 content: '';
-                left: 0;
+                right: 0;
                 top: 50%;
                 width: 2px;
                 height: 0;
@@ -83,8 +83,8 @@
                 & > a:not(.mega-menu-title){
                     &::after{
                         position: absolute;
-                        content: '\f105';
-                        right: 0;
+                        content: '\f104';
+                        left: 0;
                         top: 50%;
                         font-family: var(--tp-ff-fontawesome);
                         font-size: 16px;

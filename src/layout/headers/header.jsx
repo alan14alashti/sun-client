@@ -87,10 +87,7 @@ const Header = () => {
                         onClick={() => setIsCategoryActive(!isCategoryActive)}
                         className="tp-category-menu-btn tp-category-menu-toggle"
                       >
-                        <span>
-                          <CategoryMenu />
-                        </span>
-                        All Departments
+                        دسته بندی کالاها
                       </button>
                       <nav className="tp-category-menu-content">
                         <HeaderCategory categoryType="electronics" isCategoryActive={isCategoryActive} />
