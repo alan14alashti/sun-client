@@ -10,7 +10,7 @@ import useCartInfo from '@/hooks/use-cart-info';
 import { openCartMini } from '@/redux/features/cartSlice';
 import HeaderTopRight from './header-com/header-top-right';
 import CartMiniSidebar from '@/components/common/cart-mini-sidebar';
-import { CartTwo, Compare, Facebook, Menu, PhoneTwo, Wishlist, Search } from '@/svg';
+import { CartTwo, Compare, Facebook, Menu, PhoneTwo, Wishlist, Search, ShippingCar } from '@/svg';
 import useSearchFormSubmit from '@/hooks/use-search-form-submit';
 import OffCanvas from '@/components/common/off-canvas';
 
@@ -28,29 +28,31 @@ const HeaderTwo = ({ style_2 = false }) => {
           <div className="tp-header-top-2 p-relative z-index-11 tp-header-top-border d-none d-md-block">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-md-6">
-                  <div className="tp-header-info d-flex align-items-center">
+                <div className="col-md-12">
+                  <div className="tp-header-info d-flex align-items-center justify-content-between">
                     <div className="tp-header-info-item">
-                      <a href="#">
-                        <span>
-                          <Facebook />
-                        </span> 7500k Followers
+                      <a className='d-flex' href="#">
+                        <span className='mx-3'>
+                          <ShippingCar />
+                        </span>
+                        <p> تهران - خیابان جمهوری ، بعد از پل حافظ پاساژ امجد، همکف، پلاک ۸</p>
                       </a>
                     </div>
                     <div className="tp-header-info-item">
-                      <a href="tel:402-763-282-46">
+                      <a >
                         <span>
                           <PhoneTwo />
-                        </span> +(966) 595 035 008
+                        </span> 
+                        09101684754
                       </a>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                   <div className="tp-header-top-right tp-header-top-black d-flex align-items-center justify-content-end">
                     <HeaderTopRight />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -62,7 +64,7 @@ const HeaderTwo = ({ style_2 = false }) => {
                   <div className="col-xl-2 col-lg-5 col-md-5 col-sm-4 col-6">
                     <div className="logo">
                       <Link href="/">
-                        <Image src={logo} alt="logo" priority />
+                        <Image width={175} height={55} src={"/assets/img/logo/sunonline.png"} alt="logo" />
                       </Link>
                     </div>
                   </div>
@@ -74,42 +76,43 @@ const HeaderTwo = ({ style_2 = false }) => {
                     </div>
                   </div>
                   <div className="col-xl-5 col-lg-7 col-md-7 col-sm-8 col-6">
-                    <div className="tp-header-bottom-right d-flex align-items-center justify-content-end pl-30">
+                    <div className="tp-header-bottom-right d-flex align-items-center justify-content-end">
                       <div className="tp-header-search-2 d-none d-sm-block">
                         <form onSubmit={handleSubmit}>
                           <input
                             onChange={(e) => setSearchText(e.target.value)}
                             value={searchText}
                             type="text"
-                            placeholder="Search for Products..." />
+                            placeholder="جستجو برای محصولات"
+                          />
                           <button type="submit">
                             <Search />
                           </button>
                         </form>
                       </div>
-                      <div className="tp-header-action d-flex align-items-center ml-30">
-                        <div className="tp-header-action-item d-none d-lg-block">
+                      <div className=" tp-header-action d-flex align-items-center justify-content-between ml-0">
+                        {/* <div className="tp-header-action-item d-none d-lg-block">
                           <Link href="/compare" className="tp-header-action-btn">
                             <Compare />
                           </Link>
-                        </div>
-                        <div className="tp-header-action-item d-none d-lg-block">
+                        </div> */}
+                        <div className="tp-header-action-item d-none d-lg-block mx-3">
                           <Link href="/wishlist" className="tp-header-action-btn">
                             <Wishlist />
                             <span className="tp-header-action-badge">{wishlist.length}</span>
                           </Link>
                         </div>
-                        <div className="tp-header-action-item">
+                        <div className="tp-header-action-item ">
                           <button onClick={() => dispatch(openCartMini())} className="tp-header-action-btn cartmini-open-btn" >
                             <CartTwo />
                             <span className="tp-header-action-badge">{quantity}</span>
                           </button>
                         </div>
-                        <div className="tp-header-action-item tp-header-hamburger mr-20 d-xl-none">
+                        {/* <div className="tp-header-action-item tp-header-hamburger mr-20 d-xl-none">
                           <button onClick={() => setIsCanvasOpen(true)} type="button" className="tp-offcanvas-open-btn">
                             <Menu />
                           </button>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>

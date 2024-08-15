@@ -8,28 +8,24 @@ import {handleFilterSidebarOpen } from "@/redux/features/shop-filter-slice";
 const ShopTopRight = ({selectHandleFilter}) => {
   const dispatch = useDispatch()
   return (
-    <div className="tp-shop-top-right d-sm-flex align-items-center justify-content-xl-end">
+    <div className="tp-shop-top-right d-sm-flex align-items-center justify-content-xl-start">
       <div className="tp-shop-top-select">
         <NiceSelect
           options={[
-            { value: "Default Sorting", text: "Default Sorting" },
-            { value: "Low to High", text: "Low to High" },
-            { value: "High to Low", text: "High to Low" },
-            { value: "New Added", text: "New Added" },
-            { value: "On Sale", text: "On Sale" },
+            { value: "Default Sorting", text: "پیش فرض" },
+            { value: "Low to High", text: "قیمت کم به زیاد" },
+            { value: "High to Low", text: "قیمت زیاد به کم" },
+            { value: "New Added", text: "جدیدترین" },
           ]}
           defaultCurrent={0}
           onChange={selectHandleFilter}
-          name="Default Sorting"
+          name='مرتب سازی'
         />
       </div>
       <div className="tp-shop-top-filter">
-        <button onClick={()=> dispatch(handleFilterSidebarOpen())} type="button" className="tp-filter-btn">
-          <span>
-            <Filter />
-          </span>
-          {" "}Filter
-        </button>
+        <span className="tp-filter-btn">
+          مرتب سازی
+        </span>
       </div>
     </div>
   );

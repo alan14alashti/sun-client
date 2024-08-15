@@ -19,12 +19,10 @@
 	height: 42px;
 	line-height: 40px;
 	outline: none;
-	padding-left: 18px;
-	padding-right: 30px;
 	position: relative;
-	text-align: right !important;
 	-webkit-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+    padding: 10px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -42,11 +40,11 @@
         border-color: #999;
     }
 
-    &::after{
+    &::before{
         position: absolute;
 		content: '\f107';
         top: 50%;
-        right: 0;
+        left: 3px;
 		font-family: var(--tp-ff-fontawesome);
 		color: var(--tp-common-black);
 		font-weight: 500;

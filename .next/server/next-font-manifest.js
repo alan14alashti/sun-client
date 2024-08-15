@@ -4,5 +4,5 @@ self.__NEXT_FONT_MANIFEST={
   },
   "app": {},
   "appUsingSizeAdjust": false,
-  "pagesUsingSizeAdjust": true
+  "pagesUsingSizeAdjust": false
 }

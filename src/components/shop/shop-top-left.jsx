@@ -4,7 +4,10 @@ import React from "react";
 const ShopTopLeft = ({total,showing=9}) => {
   return (
     <>
-      <div className="tp-shop-top-left d-flex align-items-center ">
+      <div className="tp-shop-top-left d-flex align-items-center justify-content-end">
+        <div className="tp-shop-top-result">
+          <p>نمایش 1-{showing} از {total} کالا</p>
+        </div>
         <div className="tp-shop-top-tab tp-tab">
           <ul className="nav nav-tabs" id="productTab" role="tablist">
             <li className="nav-item" role="presentation">
@@ -39,9 +42,7 @@ const ShopTopLeft = ({total,showing=9}) => {
             </li>
           </ul>
         </div>
-        <div className="tp-shop-top-result">
-          <p>Showing 1–{showing} of {total} results</p>
-        </div>
+        
       </div>
     </>
   );
