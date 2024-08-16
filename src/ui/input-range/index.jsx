@@ -8,25 +8,8 @@ const InputRange = ({ STEP, MIN, MAX, values, handleChanges }) => {
         min={MIN}
         max={MAX}
         values={values}
+        rtl={true}
         onChange={(vals) => handleChanges(vals)}
-        renderTrack={({ props, children }) => (
-          <div
-            {...props}
-            style={{
-              ...props.style,
-              height: '3px',
-              width: '100%',
-              background: getTrackBackground({
-                values: values,
-                colors: ["#EDEDED", "#0989FF", "#EDEDED"],
-                min: MIN,
-                max: MAX
-              }),
-            }}
-          >
-            {children}
-          </div>
-        )}
         renderThumb={({ props, isDragged }) => (
           <div
             {...props}
@@ -38,6 +21,25 @@ const InputRange = ({ STEP, MIN, MAX, values, handleChanges }) => {
               backgroundColor: isDragged ? "#0989FF" : "#0989FF"
             }}
           />
+        )}
+        renderTrack={({ props, children }) => (
+          <div
+            {...props}
+            style={{
+              ...props.style,
+              height: '3px',
+              width: '100%',
+              background: getTrackBackground({
+                values: values,
+                colors: ["#EDEDED", "#0989FF", "#EDEDED"],
+                min: MIN,
+                max: MAX,
+                rtl: true
+              }),
+            }}
+          >
+            {children}
+          </div>
         )}
       />
     </>

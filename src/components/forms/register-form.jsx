@@ -58,7 +58,7 @@ const RegisterForm = () => {
             />
           </div>
           <div className="tp-login-input-title">
-            <label htmlFor="name">Your Name</label>
+            <label htmlFor="name">نام</label>
           </div>
           <ErrorMsg msg={errors.name?.message} />
         </div>
@@ -73,7 +73,7 @@ const RegisterForm = () => {
             />
           </div>
           <div className="tp-login-input-title">
-            <label htmlFor="email">Your Email</label>
+            <label htmlFor="email">ایمیل</label>
           </div>
           <ErrorMsg msg={errors.email?.message} />
         </div>
@@ -94,7 +94,7 @@ const RegisterForm = () => {
               </span>
             </div>
             <div className="tp-login-input-title">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">رمز عبور</label>
             </div>
           </div>
           <ErrorMsg msg={errors.password?.message} />
@@ -118,7 +118,7 @@ const RegisterForm = () => {
       </div>
       <div className="tp-login-bottom">
         <button type="submit" className="tp-login-btn w-100">
-          Sign Up
+          ثبت نام
         </button>
       </div>
     </form>

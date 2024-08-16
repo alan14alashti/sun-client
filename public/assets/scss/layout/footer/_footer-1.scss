@@ -27,11 +27,11 @@
                     color: var(--tp-text-2);
                     position: relative;
                     padding-left: 10px;
-                    &::after{
+                    &::before{
                         position: absolute;
                         content: '';
-                        left: 0;
-                        top: 6px;
+                        right: -10px;
+                        top: 8px;
                         width: 3px;
                         height: 3px;
                         background-color: var(--tp-text-2);

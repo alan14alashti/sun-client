@@ -11,7 +11,7 @@ const LoginPage = () => {
     <Wrapper>
       <SEO pageTitle="Login" />
       <HeaderTwo style_2={true} />
-      <CommonBreadcrumb title="Login" subtitle="Login" center={true} />
+      <CommonBreadcrumb title="صفحه ورود" subtitle="ورود" center={true} />
       <LoginArea/>
       <Footer primary_style={true} />
     </Wrapper>

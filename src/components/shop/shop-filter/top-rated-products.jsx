@@ -45,7 +45,7 @@ const TopRatedProducts = () => {
             <Link href={`/product-details/${item._id}`}>{item.title.substring(0,20)}...</Link>
           </h4>
           <div className="tp-shop-widget-product-price-wrapper">
-            <span className="tp-shop-widget-product-price">${item.price.toFixed(2)}</span>
+            <span className="tp-shop-widget-product-price"> {item.price.toFixed(2)} تومان </span>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ const TopRatedProducts = () => {
   return (
     <>
       <div className="tp-shop-widget mb-50">
-        <h3 className="tp-shop-widget-title">Top Rated Products</h3>
+        <h3 className="tp-shop-widget-title">محبوب ترین محصولات</h3>
         <div className="tp-shop-widget-content">
           <div className="tp-shop-widget-product">
             {content}

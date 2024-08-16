@@ -20,8 +20,8 @@ const CommonBreadcrumb = ({
               <h3 className="breadcrumb__title">{title}</h3>
               <div className="breadcrumb__list">
                 <span>
-                  <a href="#">Home</a>
-                </span>
+                  <a href="./">خانه</a>
+                </span>/
                 <span>{subtitle}</span>
               </div>
             </div>

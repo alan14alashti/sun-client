@@ -15,9 +15,9 @@ const HeaderMainRight = ({ setIsCanvasOpen }) => {
   return (
     <div className="tp-header-main-right d-flex align-items-center justify-content-end">
       <div className="tp-header-login d-none d-lg-block">
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center justify-content-end">
           <div className="tp-header-login-icon">
-            <span>
+            {/* <span>
               {userInfo?.imageURL ? (
                 <Link href="/profile">
                   <Image
@@ -36,29 +36,29 @@ const HeaderMainRight = ({ setIsCanvasOpen }) => {
               ) : (
                 <User />
               )}
-            </span>
+            </span> */}
           </div>
           <div className="tp-header-login-content d-none d-xl-block">
-            {!userInfo?.name && (
+            {/* {!userInfo?.name && (
               <Link href="/login">
                 <span>Hello,</span>
               </Link>
-            )}
-            {userInfo?.name && <span>Hello, {userInfo?.name}</span>}
-            <div className="tp-header-login-title">
+            )} */}
+            {userInfo?.name && <Link href="/profile"><span>{userInfo?.name}</span></Link>}
+            {/* <div className="tp-header-login-title">
               {!userInfo?.name && <Link href="/login">Sign In</Link>}
               {userInfo?.name && <Link href="/profile">Your Account</Link>}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
-      <div className="tp-header-action d-flex align-items-center ml-50">
-        <div className="tp-header-action-item d-none d-lg-block">
+      <div className="tp-header-action d-flex align-items-center justify-content-end m-0">
+        {/* <div className="tp-header-action-item d-none d-lg-block">
           <Link href="/compare" className="tp-header-action-btn">
             <Compare />
           </Link>
-        </div>
-        <div className="tp-header-action-item d-none d-lg-block">
+        </div> */}
+        <div className="tp-header-action-item d-none d-lg-block mx-3">
           <Link href="/wishlist" className="tp-header-action-btn">
             <Wishlist />
             <span className="tp-header-action-badge">{wishlist.length}</span>

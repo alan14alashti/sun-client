@@ -35,7 +35,8 @@ const Pagination = ({
                 currPage === 1 && "disabled"
               }`}
             >
-              <PaginationPrev />
+              <PaginationNext />
+              
             </button>
           </li>
 
@@ -52,7 +53,7 @@ const Pagination = ({
                 currPage === totalPage ? "disabled" : ""
               }`}
             >
-              <PaginationNext />
+              <PaginationPrev />
             </button>
           </li>
         </ul>
